@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+    background-size: cover;
+    height: 100vh;
+    width: 98vw;
+    background: linear-gradient(rgb(0, 120, 150), rgb(0, 10, 22));
+}
+
+#fundoGame {
+    background: url(../../assets/Aesthetic-Star-PNG-Transparent.png) scroll;
+
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+#fundogame2 {
+    background: url(../../assets/Aesthetic-Star-PNG-Transparent3.png );
+    opacity: 0.8;
+    filter: blur(3px);
+    background-size: cover;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+#game {
+    position: relative;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+#inicio {
+    padding: 32px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 30vh;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+#inicio p {
+    margin: 16px 0;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+#button {
+    padding: 16px 32px;
+    background-color: green;
+    margin-top: 16px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+}
+
+#button:hover {
+    background-color: rgb(0, 97, 0);
+}
+
+@keyframes inimigo {
+    0% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+#inimigo {
+    animation: inimigo 0.3s infinite;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: url(../../assets/naveInimiga1.png);
+    transform: rotate(135deg);
+    top: 36px;
+    left: 36px;
+    background-size: cover;
+}
+#inimigo2 {
+    animation: inimigo 0.3s infinite;
+    position: absolute;
+    height: 100px;
+    width: 60px;
+    background: url(../../assets/naveInimiga.png);
+    top: 36px;
+    left: 36px;
+    background-size: cover;
+}
+
+@keyframes nave {
+    from {
+        background: url(../../assets/nave.png);
+        background-size: cover;
+        opacity: 0.3;
+    }
+
+    to {
+        background: url(../../assets/naveCauda.png);
+        background-size: cover;
+        opacity: 1;
+    }
+}
+
+#nave {
+    border-radius: 50%;
+    z-index: 1;
+    animation: nave 0.3s infinite;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: url(../../assets/nave.png);
+    bottom: 36px;
+    background-size: 100%;
+    background-position: center;
+    left: 400px;
+}
+
+@keyframes prim {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    25% {
+        transform: rotate(15deg)
+    }
+
+    50% {
+        transform: rotate(0deg)
+    }
+
+    75% {
+        transform: rotate(-15deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+#recompensa {
+    animation: prim 0.3s infinite;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background: url(../../assets/recompensa.png);
+    top: 36px;
+    right: 36px;
+    background-size: cover;
+}
+#recompensa2 {
+    animation: prim 0.3s infinite;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background: url(../../assets/recompensa.png);
+    background-size: cover;
+}
+#recompensa3 {
+    animation: prim 0.3s infinite;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background: url(../../assets/recompensa.png);
+    background-size: cover;
+}
+#recompensa4 {
+    animation: prim 0.3s infinite;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background: url(../../assets/recompensa.png);
+    background-size: cover;
+}
+
+#bigRecompensa {
+    text-align: center;
+    animation: prim 0.5s infinite;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background: url(../../assets/recompensa.png), rgb(0, 128, 0);
+    top: 128px;
+    right: 24px;
+    background-size: cover;
+    border-radius: 50%
+}
+
+#disparo {
+    width: 20px;
+    height: 100px;
+    position: absolute;
+    background: url(../../assets/shot3.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#explosao {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background: url(../../assets/explosion.png);
+    background-size: cover;
+}
+
+#placar{
+    position: absolute;
+    right: 36px;
+    top: 36px;
+    width: 450px;
+    text-align: center;
+    padding: 8px;
+    background-color: rgba(127, 255, 212, 0.5);
+    color: aliceblue;
+}
+
+#vida{
+    position: absolute;
+    right: 500px;
+    top: 40px;
+    height: 36px;
+    width: 36px;
+    background-color: rgba(0, 255, 255, 0.459);
+    z-index: 1;
+    background: url(../../assets/vida.png)  no-repeat;
+    background-size: 100%;
+    text-align: center;
+    color: aliceblue;
+}
+
+#gameOver{
+    position: absolute;
+    left: 40vw;
+    top: 40vh;
+    background-color: aliceblue;
+    padding: 48px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

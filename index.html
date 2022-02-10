@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/index.css">
+    <title>Nave Maluca</title>
+</head>
+<body>
+
+    <audio src="./assets/audio/naveChoque.WAV" preload="auto" id="somChoque"></audio>
+    <audio src="./assets/audio/explosao.WAV" preload="auto" id="somExplosao"></audio>
+    <audio src="./assets/audio/background.mp3" preload="auto" id="music" ></audio>
+    <audio src="./assets/audio/recompensa.wav" preload="auto" id="somRecompensa" ></audio>
+    <audio src="./assets/audio/recompensa.wav" preload="auto" id="somRecompensa2" ></audio>
+    <audio src="./assets/audio/bigRecompensa.wav" preload="auto" id="somBigRecompensa" ></audio>
+    <audio src="./assets/audio/gameOver.mp3" preload="auto" id="somGameOver" ></audio>
+    
+    
+    <div id="container">
+        <div id="fundogame2">
+        </div>
+        
+        <div id="fundoGame">
+            <div id="game">
+                <div id="inicio">
+                    <h1>Nave Maluca</h1>
+                    <p>utilize a tecla D para mover a nave para direita e A para mover para esquerda, atire nas naves inimigas com a letra W e colete as recompensas no caminho</p>
+                    <p id="button" onclick="start()">
+                            Clique aqui para iniciar
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+    <script src="./src/js/jquery.min.js"></script>
+    <script src="./src/js/js.js"></script>
+    <script src="./src/js/jquery-collision.min.js" type="text/javascript"></script>
+    </html>
